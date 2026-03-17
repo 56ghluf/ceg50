@@ -1,34 +1,4 @@
-const copyText = `
-p_{1}=\\left(0,6\\right)
-p_{2}=\\left(-1,4\\right)
-p_{3}=\\left(-0.5,4\\right)
-p_{4}=\\left(-1.5,2\\right)
-p_{5}=\\left(-1,2\\right)
-p_{6}=\\left(-2,0\\right)
-p_{7}=\\left(1,4\\right)
-p_{8}=\\left(0.5,4\\right)
-p_{9}=\\left(1.5,2\\right)
-p_{10}=\\left(1,2\\right)
-p_{11}=\\left(2,0\\right)
-p_{12}=\\left(-0.25,0\\right)
-p_{13}=\\left(-0.25,-1.5\\right)
-p_{14}=\\left(0.25,0\\right)
-p_{15}=\\left(0.25,-1.5\\right)
-tp_{1}+\\left(1-t\\right)p_{2}\\left\\{0\\le t\\le1\\right\\}
-tp_{2}+\\left(1-t\\right)p_{3}\\left\\{0\\le t\\le1\\right\\}
-tp_{3}+\\left(1-t\\right)p_{4}\\left\\{0\\le t\\le1\\right\\}
-tp_{4}+\\left(1-t\\right)p_{5}\\left\\{0\\le t\\le1\\right\\}
-tp_{5}+\\left(1-t\\right)p_{6}\\left\\{0\\le t\\le1\\right\\}
-tp_{1}+\\left(1-t\\right)p_{7}\\left\\{0\\le t\\le1\\right\\}
-tp_{7}+\\left(1-t\\right)p_{8}\\left\\{0\\le t\\le1\\right\\}
-tp_{8}+\\left(1-t\\right)p_{9}\\left\\{0\\le t\\le1\\right\\}
-tp_{9}+\\left(1-t\\right)p_{10}\\left\\{0\\le t\\le1\\right\\}
-tp_{10}+\\left(1-t\\right)p_{11}\\left\\{0\\le t\\le1\\right\\}
-tp_{6}+\\left(1-t\\right)p_{11}\\left\\{0\\le t\\le1\\right\\}
-tp_{12}+\\left(1-t\\right)p_{13}\\left\\{0\\le t\\le1\\right\\}
-tp_{14}+\\left(1-t\\right)p_{15}\\left\\{0\\le t\\le1\\right\\}
-tp_{13}+\\left(1-t\\right)p_{15}\\left\\{0\\le t\\le1\\right\\}
-`;
+const copyText = 'set parametric;set trange [0:1];unset border;unset xtics;unset ytics;unset key;unset title;set size ratio -1;plot t-1, 2*t + 4 w l lw 6, -0.5 * t - 0.5, 4 w l lw 6, t - 1.5, 2*t+2 w l lw 6, -0.5*t-1,2 w l lw 6, t-2,2*t w l lw 6, -t+1,2*t+4 w l lw 6, 0.5*t+0.5,4 w l lw 6, -t+1.5,2*t+2 w l lw 6, 0.5*t+1,2 w l lw 6, -t+2,2*t w l lw 6, -4*t+2,0 w l lw 6, -0.25,1.5*t-1.5 w l lw 6, 0.25,1.5*t-1.5 w l lw 6, -0.5*t+0.25,-1.5 w l lw 6';
 
 const copyButton = document.getElementById("copyButton");
 
