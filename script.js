@@ -25,7 +25,7 @@ function showWelcome() {
   input.focus();
 
   async function submit() {
-    storedPassword = input.value.toLowerCase();
+    storedPassword = input.value.toLowerCase().trim();
     await startFlow();
   }
 
