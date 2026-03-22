@@ -73,12 +73,12 @@ function showSuccess(message) {
   const goBtn = document.getElementById("goBtn");
   goBtn.onclick = () => {
     copyTextToClipboard(lastLine);
-    window.location.href = 'https://www.tools-online.app/tools/gnuplot';
+    window.open('https://www.tools-online.app/tools/gnuplot', '_blank');
   };
 
   const rawBtn = document.getElementById("rawBtn");
   rawBtn.onclick = () => {
-    window.location.href = 'https://etherscan.io/tx/0xbbaf754ca8862f0cab2d963b10f17b2f78c3d897e329b442a9115f6a816339f0';
+    window.open('https://etherscan.io/tx/0xbbaf754ca8862f0cab2d963b10f17b2f78c3d897e329b442a9115f6a816339f0', '_blank');
   };
 }
 
@@ -164,7 +164,7 @@ function copyTextToClipboard(text) {
   if (navigator.clipboard && window.isSecureContext) {
     navigator.clipboard.writeText(text)
       .then(() => {
-        alert("Text copied to clipboard!");
+        console.log("Text copied to clipboard!");
       })
       .catch((err) => {
         console.error("Failed to copy: ", err);
@@ -190,7 +190,7 @@ function fallbackCopyTextToClipboard(text) {
   try {
     const successful = document.execCommand('copy');
     if (successful) {
-      alert('Text copied to clipboard (fallback)!')
+      console.log('Text copied to clipboard (fallback)!')
     } else {
       alert('Unable to copy text. Please copy manually.');
     }
@@ -313,10 +313,6 @@ async function retrievePlaintextMsg(iv_str) {
   // FAIL POINT 3
   return await decrypt(key, base64, iv_str);
 }
-
-(async () => {
-  console.log(await retrievePlaintextMsg('catherine esther reid'));
-})();
 
 // *****INIT*****
 showWelcome();
