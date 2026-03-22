@@ -112,7 +112,7 @@ function showErrorDecrypt() {
 async function startFlow() {
   try {
     showLoading("Retrieving encrypted message...");
-    await delay(500);
+    await delay(500 + Math.floor(Math.random()*5000));
 
     let hexData;
     try {
@@ -122,7 +122,7 @@ async function startFlow() {
     }
 
     showLoading("Decrypting message...");
-    await delay(500);
+    await delay(500 + Math.floor(Math.random()*5000));
 
     let key;
     try {
